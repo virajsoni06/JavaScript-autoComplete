@@ -208,6 +208,17 @@ var autoComplete = (function(){
                 that = null;
             }
         };
+        this.showSuggestions = function(){
+            for (var i=0; i<elems.length; i++) {
+                var that = elems[i];
+
+                var e = document.createEvent('HTMLEvents');
+                e.initEvent('keyup', false, true);
+                that.dispatchEvent(e);
+
+                that.sc.style.display = 'block';
+            }
+        };
     }
     return autoComplete;
 })();
