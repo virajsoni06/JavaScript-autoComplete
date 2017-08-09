@@ -1,3 +1,5 @@
+This is a forked repository of [Pixabay/JavaScript-autoComplete](https://github.com/Pixabay/JavaScript-autoComplete) with an additional method (`showSuggestions`) to trigger suggestions
+
 JavaScript-autoComplete
 ===================
 
@@ -19,6 +21,10 @@ https://goodies.pixabay.com/javascript/auto-complete/demo.html
 * Fully flexible data source
 * Smart caching, delay and minimum character settings
 * Callbacks
+
+
+# Fork Contributors
+- [Viraj Soni](https://github.com/virajsoni06)
 
 ## Changelog
 
