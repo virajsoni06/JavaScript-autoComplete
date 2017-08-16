@@ -28,9 +28,14 @@ https://goodies.pixabay.com/javascript/auto-complete/demo.html
 
 ## Changelog
 
+### Version 1.0.7 - 2017/08/10
+
+* Added option to give custom width to suggestion box
+
 ### Version 1.0.6 - 2017/08/10
 
 * Added option `reFocusAfterSelection` to enabe/disable focus on the field after selection
+
 
 ### Version 1.0.5 - 2017/08/10
 
