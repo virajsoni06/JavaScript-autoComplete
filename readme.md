@@ -28,6 +28,15 @@ https://goodies.pixabay.com/javascript/auto-complete/demo.html
 
 ## Changelog
 
+### Version 1.0.6 - 2017/08/10
+
+* Added option `reFocusAfterSelection` to enabe/disable focus on the field after selection
+
+### Version 1.0.5 - 2017/08/10
+
+* Added method `showSuggestions` to trigger the suggestion list
+
+
 ### Version 1.0.4 - 2016/02/10
 
 * Included pull #6 and added offsetLeft/offsetTop as optional parameter for suggestions container.

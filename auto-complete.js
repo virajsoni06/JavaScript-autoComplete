@@ -37,6 +37,7 @@ var autoComplete = (function(){
             offsetTop: 1,
             cache: 1,
             menuClass: '',
+            reFocusAfterSelection: true,
             renderItem: function (item, search){
                 // escape special characters
                 search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
@@ -110,7 +111,13 @@ var autoComplete = (function(){
                     that.last_val = that.value;
                     that.sc.style.display = 'none';
                     setTimeout(function(){ that.sc.style.display = 'none'; }, 350); // hide suggestions on fast input
-                } else if (that !== document.activeElement) setTimeout(function(){ that.focus(); }, 20);
+                } else if (that !== document.activeElement) {
+                    if(o.reFocusAfterSelection) {
+                        setTimeout(function(){
+                            that.focus();
+                        }, 20);
+                    }
+                }
             };
             addEvent(that, 'blur', that.blurHandler);
 
