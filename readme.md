@@ -28,9 +28,14 @@ https://goodies.pixabay.com/javascript/auto-complete/demo.html
 
 ## Changelog
 
+### Version 1.0.9 - 2017/08/10
+
+* `showSuggestions` update
+
 ### Version 1.0.8 - 2017/08/10
 
 * Append `px` to custom suggestion width option
+
 
 ### Version 1.0.7 - 2017/08/10
 

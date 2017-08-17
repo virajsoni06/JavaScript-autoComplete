@@ -220,11 +220,24 @@ var autoComplete = (function(){
             for (var i=0; i<elems.length; i++) {
                 var that = elems[i];
 
-                var e = document.createEvent('HTMLEvents');
-                e.initEvent('keyup', false, true);
-                that.dispatchEvent(e);
+                var val = that.value;
+                if (val.length >= o.minChars) {
+                  that.last_val = val;
+                    if (o.cache) {
+                        if (val in that.cache) { suggest(that.cache[val]); console.log(that.cache[val]); return; }
+                        // no requests if previous suggestions were empty
+                        for (var i=1; i<val.length-o.minChars; i++) {
+                            var part = val.slice(0, val.length-i);
+                           if (part in that.cache && !that.cache[part].length) { suggest([]); return; }
+                        }
+                    }
+                   that.timer = setTimeout(function(){ o.source(val, suggest) }, o.delay);
+                   that.focus();
+                } else {
+                  that.last_val = val;
+                  that.sc.style.display = 'none';
+                }
 
-                that.sc.style.display = 'block';
             }
         };
     }
